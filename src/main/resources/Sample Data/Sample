@@ -1,0 +1,59 @@
+POST:
+http://localhost:8090/demo/user/create
+{
+  "name" : "adeel",
+  "userSettings" : {
+    "bike" : "abc"
+  }
+}
+
+POST : http://localhost:8090/demo/user/create
+//complete Request
+{
+  "name" : "test user- 2",
+  "gender":"male",
+  "products":[
+  	{
+  		"name":"IPhone",
+  		"quantity":1,
+  		"price":100
+  	},
+  	{
+  		"name":"QMobile",
+  		"quantity":1,
+  		"price":100
+  	}],
+  "userSettings" : {
+    "admin" : "true"
+  },
+  "address":{
+  	"city":"Lahore",
+  	"state":"Punjab",
+  	"zipcode":5400
+  }
+}
+
+
+Get :
+http://localhost:8090/demo/user/
+[
+    {
+        "userId": "5dd3c726e2313e25d0223adb",
+        "name": "adl",
+        "creationDate": 1574160166081,
+        "userSettings": {
+            "bike": "abc"
+        }
+    },
+    {
+        "userId": "5dd3c75ce2313e25d0223adc",
+        "name": "adeel",
+        "creationDate": 1574160220567,
+        "userSettings": {
+            "bike": "abc"
+        }
+    }
+]
+
+GET: get by usr Id.
+http://localhost:8090/demo/user/settings/{userId}
