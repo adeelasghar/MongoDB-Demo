@@ -1,20 +1,25 @@
 package com.demo.service;
 
-import java.util.List;
-
+import com.demo.dto.ResponseDTO;
 import com.demo.entity.User;
+
+/**
+ * @author Adeel.Asghar
+ */
 
 public interface UserService {
 
-	List<User> getAllUsers();
+	ResponseDTO getAllUsers();
 
 	User getUserById(String userId);
 
-	User addNewUser(User user);
+	ResponseDTO findOne(String userId);
 
-	Object getAllUserSettings(String userId);
+	ResponseDTO saveUser(User user);
+
+	ResponseDTO getAllUserSettings(String userId);
 
 	String getUserSetting(String userId, String key);
 
-	String addUserSetting(String userId, String key, String value);
+	ResponseDTO saveUserSettings(String userId, String key, String value);
 }

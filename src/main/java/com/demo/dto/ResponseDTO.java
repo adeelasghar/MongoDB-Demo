@@ -1,5 +1,6 @@
 package com.demo.dto;
 
+import com.demo.util.ApiCode;
 import lombok.*;
 import java.io.Serializable;
 
@@ -18,5 +19,6 @@ public class ResponseDTO implements Serializable {
     Object content;
     boolean isSuccessful = true;
     String message = "Request processed successfully!";
+    ApiCode code;
 
 }

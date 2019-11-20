@@ -12,13 +12,21 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
+/**
+ * @author Adeel.Asghar
+ */
+
 @Data
 @AllArgsConstructor
 @Document(collection = "order_DB")
 public class User {
 
 	@Id
-	private int id;
+	@GeneratedValue(strategy= GenerationType.AUTO)
+	private String userId;
 
 	private String name;
 
